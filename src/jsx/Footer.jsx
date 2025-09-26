@@ -60,7 +60,7 @@ function Footer() {
                     <a href="https://www.flickr.com/photos/unctad/albums/72177720329226625/" target="_blank" rel="noreferrer">Photos</a>
                   </li>
                   <li>
-                    <a href="https://trello.com/b/5Rj98nG2/" target="_blank" rel="noreferrer">Audio and other assets</a>
+                    <a href="https://trello.com/b/5Rj98nG2/" target="_blank" rel="noreferrer">Digital assets</a>
                   </li>
                 </ul>
               </div>
