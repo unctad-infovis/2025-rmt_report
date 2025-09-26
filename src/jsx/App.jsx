@@ -325,7 +325,6 @@ function App() {
               <p>The world’s 1.9 million seafarers – most from developing countries – remain under strain. While recent amendments to the Maritime Labour Convention are encouraging, seafarer rights need more consistent implementation and enforcement, involving concerted action from flag states, port states and industry.</p>
               <p>The Hong Kong Convention on ship recycling entered into force in June 2025, setting new global standards on safety and environmental sustainability. Its widespread ratification will be key to maximizing its impact.</p>
               <p>The IMO is drafting a code for the safe, secure and environmentally sound operation of autonomous ships, to be finalized in 2026. It is also developing guidance or best practices on ship registration. All countries and industry stakeholders should engage in this important work.</p>
-
             </div>
           </div>
         </div>
