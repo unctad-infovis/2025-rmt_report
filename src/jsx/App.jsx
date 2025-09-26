@@ -18,27 +18,22 @@ import ScrollingText from './components/ScrollingText.jsx';
 function App() {
   const appRef = useRef();
   const overviewRef = useRef();
+  const isVisibleChapterOverview = useIsVisible(overviewRef);
   const chaptersContainerRef = useRef();
   const chapter1Ref = useRef();
+  const isVisibleChapter1 = useIsVisible(chapter1Ref);
   const chapter2Ref = useRef();
+  const isVisibleChapter2 = useIsVisible(chapter2Ref);
   const chapter3Ref = useRef();
+  const isVisibleChapter3 = useIsVisible(chapter3Ref);
   const chapter4Ref = useRef();
+  const isVisibleChapter4 = useIsVisible(chapter4Ref);
   const chapter5Ref = useRef();
+  const isVisibleChapter5 = useIsVisible(chapter5Ref);
+  const chapter6Ref = useRef();
+  const isVisibleChapter6 = useIsVisible(chapter6Ref);
 
   const [offset, setOffset] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
-    window.removeEventListener('scroll', onScroll);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-  const [sectionProgress, setSectionProgress] = useState(0);
-
-  useEffect(() => {
-    const windowHeight = 0;
-    setSectionProgress((offset > chaptersContainerRef.current.offsetTop - windowHeight) ? (Math.min(((offset - (chaptersContainerRef.current.offsetTop - windowHeight)) / chaptersContainerRef.current.offsetHeight) * 100, 100)) : 0);
-  }, [offset]);
 
   const analytics = window.gtag || undefined;
   const track = useCallback((label_event = false, value_event = false) => {
@@ -56,7 +51,67 @@ function App() {
     track('Scroll', chapter);
   }, [track]);
 
-  const isVisibleChapterOverview = useIsVisible(overviewRef);
+  useEffect(() => {
+    if (!overviewRef.current.classList.contains('seen') && isVisibleChapterOverview) {
+      overviewRef.current.classList.add('seen');
+      seenChapter('Overview');
+    }
+  }, [overviewRef, seenChapter, isVisibleChapterOverview]);
+
+  useEffect(() => {
+    if (!chapter1Ref.current.classList.contains('seen') && isVisibleChapter1) {
+      chapter1Ref.current.classList.add('seen');
+      seenChapter('Chapter 1');
+    }
+  }, [chapter1Ref, seenChapter, isVisibleChapter1]);
+
+  useEffect(() => {
+    if (!chapter2Ref.current.classList.contains('seen') && isVisibleChapter2) {
+      chapter2Ref.current.classList.add('seen');
+      seenChapter('Chapter 2');
+    }
+  }, [chapter2Ref, seenChapter, isVisibleChapter2]);
+
+  useEffect(() => {
+    if (!chapter3Ref.current.classList.contains('seen') && isVisibleChapter3) {
+      chapter3Ref.current.classList.add('seen');
+      seenChapter('Chapter 3');
+    }
+  }, [chapter3Ref, seenChapter, isVisibleChapter3]);
+
+  useEffect(() => {
+    if (!chapter4Ref.current.classList.contains('seen') && isVisibleChapter4) {
+      chapter4Ref.current.classList.add('seen');
+      seenChapter('Chapter 4');
+    }
+  }, [chapter4Ref, seenChapter, isVisibleChapter4]);
+
+  useEffect(() => {
+    if (!chapter5Ref.current.classList.contains('seen') && isVisibleChapter5) {
+      chapter5Ref.current.classList.add('seen');
+      seenChapter('Chapter 5');
+    }
+  }, [chapter5Ref, seenChapter, isVisibleChapter5]);
+
+  useEffect(() => {
+    if (!chapter6Ref.current.classList.contains('seen') && isVisibleChapter6) {
+      chapter6Ref.current.classList.add('seen');
+      seenChapter('Chapter 6');
+    }
+  }, [chapter6Ref, seenChapter, isVisibleChapter6]);
+
+  useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  const [sectionProgress, setSectionProgress] = useState(0);
+
+  useEffect(() => {
+    const windowHeight = 0;
+    setSectionProgress((offset > chaptersContainerRef.current.offsetTop - windowHeight) ? (Math.min(((offset - (chaptersContainerRef.current.offsetTop - windowHeight)) / chaptersContainerRef.current.offsetHeight) * 100, 100)) : 0);
+  }, [offset]);
 
   useEffect(() => {
     const paragraphs = appRef.current.querySelectorAll('.text_content p, .text_content ul, .text_content ol, .text_content h3, .text_content blockquote');
@@ -133,17 +188,6 @@ function App() {
       }, 50);
     }
   }, [track]);
-
-  useEffect(() => {
-    if (!overviewRef.current.classList.contains('seen') && isVisibleChapterOverview) {
-      overviewRef.current.classList.add('seen');
-      seenChapter('Overview');
-    }
-  }, [overviewRef, seenChapter, isVisibleChapterOverview]);
-
-  useEffect(() => {
-
-  }, []);
 
   return (
     <div className="app" ref={appRef}>
@@ -329,7 +373,7 @@ function App() {
           </div>
         </div>
         <ScrollingText texts={['What will it take to chart the right course?']} chapter_text="The way forward" />
-        <div className="content_container chapter_header_6" ref={chapter5Ref}>
+        <div className="content_container chapter_header_6" ref={chapter6Ref}>
           <div className="text_container">
             <ChapterHeader
               chapter_number="6"
