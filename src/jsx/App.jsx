@@ -234,7 +234,6 @@ function App() {
               <a href="https://unctad.org/system/files/official-document/rmt2025ch1_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="chapter_download" aria-label="Download Chapter 1" rel="noreferrer">Download</a>
             </div>
             <div className="media_container"><div className="image_container"><ParallaxImage src="assets/img/2025rmt-chapter1.jpg" /></div></div>
-
             <div className="text_content">
               <p>Vessel rerouting has pushed up distances, causing ton-miles to jump 5.9% in 2024, nearly three times the growth in volume.</p>
             </div>
