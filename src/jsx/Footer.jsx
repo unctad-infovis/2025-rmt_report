@@ -24,22 +24,16 @@ function Footer() {
                   <a href="https://vimeo.com/1121191483" target="_blank" rel="noreferrer">Français</a>
                   {', '}
                   <a href="https://vimeo.com/1120860563" target="_blank" rel="noreferrer">Español</a>
-                  <div className="hidden">
-                    {', '}
-                    <a href="https://vimeo.com/1095400709" target="_blank" rel="noreferrer">العربية</a>
-                    {', '}
-                    <a href="https://vimeo.com/1095400950" target="_blank" rel="noreferrer">简体中文</a>
-                    {', '}
-                    <a href="https://vimeo.com/1095401066" target="_blank" rel="noreferrer">Русский</a>
-                    {', '}
-                    <a href="https://vimeo.com/1095401035" target="_blank" rel="noreferrer">Português</a>
-                    {', '}
-                    <a href="https://vimeo.com/1095401091" target="_blank" rel="noreferrer">Kiswahili</a>
-                    {', '}
-                    <a href="https://vimeo.com/1095401119" target="_blank" rel="noreferrer">Urdu اردو</a>
-                    {', '}
-                    <a href="https://vimeo.com/1095401007" target="_blank" rel="noreferrer">Hindi हिंदी</a>
-                  </div>
+                  {', '}
+                  <a href="https://vimeo.com/1123267095" target="_blank" rel="noreferrer">العربية</a>
+                  {', '}
+                  <a href="https://vimeo.com/1122795449" target="_blank" rel="noreferrer">简体中文</a>
+                  {', '}
+                  <a href="https://vimeo.com/1123265387" target="_blank" rel="noreferrer">Русский</a>
+                  {', '}
+                  <a href="https://vimeo.com/1122840972" target="_blank" rel="noreferrer">Português</a>
+                  {', '}
+                  <a href="https://vimeo.com/1123266202" target="_blank" rel="noreferrer">Kiswahili</a>
                 </li>
               </ul>
               <br />
