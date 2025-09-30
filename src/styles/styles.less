@@ -240,25 +240,10 @@
       }
     }
   }
-  >.chapters_container >.backtotop_container {
+  .chapters_container > .backtotop_container {
     background-color: transparent;
     height: 45px;
-    position: sticky;
     width: 100%;
-    top: calc(100vh - 65px);
-    z-index: 10;
-    @keyframes bounce2 {
-      0%, 100% {
-        bottom: 0;
-      }
-      5% {
-        bottom: 5px;
-      }
-      10% {
-        bottom: 10px;
-      }
-      /* rest of the time is idle */
-    }
     div {
       animation-delay: 10s;
       animation-direction: normal;
@@ -269,11 +254,12 @@
       animation-play-state: running;
       animation-timing-function: ease-in-out;
       bottom: 20px;
-      margin-right: 50px;
-      position: relative;
+      position: fixed;
+      right: 50px;
       text-align: right;
+      z-index: 15;
       @media all and (max-width: 1000px) {
-        margin-right: 20px;
+        right: 20px;
       }
       button {
         background-color: #ffcb05;
